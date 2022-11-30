@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+<script>
+
+function add(x,y){
+  return x+y;
+}
+
+var sum = add(3,5)
+document.write(sum);
+
+
+
+//
+function sqr(x){
+  return x * x;
+}
+var sqrNum = sqr;
+document.write(sqr(4)+ "<br>");
+document.write(sqrNum(4)+"<br>");
+
+//
+/* function localNum() {
+			var num = 10;	// 지역 변수 num에 숫자 10을 할당함.
+			document.write("함수 내부에서 변수 num의 타입은 " + typeof num + "입니다.<br>");
+		}
+		localNum();			// 함수 localNum()을 호출함.
+		document.write("함수의 호출이 끝난 뒤 변수 num의 타입은 " + typeof num + "입니다.");
+
+ */
+function localNum() {
+      var num = 'asd';
+      document.write(typeof num +"<br>")
+}
+localNum();
+document.write(typeof num)
+
+//
+
+var num = 10;
+function globalNum() {
+  var num = 20;
+  document.write(num);
+}
+globalNum();
+document.write(num);
+
+//
+
+var num12 = 10; // 전역 변수 num을 선언함.
+
+function globalNum() {
+
+    var num12 = 20; // 같은 이름의 지역 변수 num을 선언함.
+
+    document.write("함수 내부에서 지역 변수 num의 값은 " + num12 + "입니다.<br>");
+
+    document.write("함수 내부에서 전역 변수 num의 값은 " + window.num12 + "입니다.<br>");
+
+</script>
+
+
+
+</body>
+</html>
